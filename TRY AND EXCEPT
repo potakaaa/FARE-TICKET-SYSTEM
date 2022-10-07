@@ -1,0 +1,38 @@
+if origin == 'COGON' and destination == 'TOYOTA':
+            print(f'ROUTE FARE: ₱{cogon_Toyota}')
+            try:
+                while (2):
+                    quantity = int(input('QUANTITY: '))
+                    subtotal = float(cogon_Toyota)
+                    total = float(subtotal) * quantity
+                    print(f'TOTAL AMOUNT: ₱{total}')
+                    try:
+                        while (3):
+                            money = float(input("MONEY: "))
+                            if money < total:
+                                print("INSUFFICIENT MONEY!!")
+                            else:
+                                change = float(money - total)
+                                print(f'CHANGE: ₱{change}')
+                                from datetime import date
+                                today = date.today()
+                                import time
+                                curr_time = time.strftime("%H:%M:%S", time.localtime())
+                            
+                                print('------------------------------------')
+                                print('------------------------------------')
+                                print(f'           FARE RECEIPT            ')
+                                print(f'            {today}              ')
+                                print(f'             {curr_time}             \n')
+                                print(f'OPERATOR: {driver}')
+                                print(f'PLATE NUMBER: {plate_number}')
+                                print(f'ROUTE ORIGIN: {origin}\nROUTE DESTINATION: {destination}')
+                                print(f'PASSENGER QUANTITY: {quantity}\nTOTAL AMOUNT: ₱{total}')
+                                print(f'MONEY RECEIVED: ₱{money}\nCHANGE: ₱{change}  ')
+                                print('------------------------------------')
+                                quit()  
+            
+                    except ValueError:
+                        print("INPUT ERROR!! Try Again!")    
+            except ValueError:
+                print("INPUT ERROR!! Try Again!")
