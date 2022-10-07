@@ -1,0 +1,128 @@
+# FROM COGON ROUTES
+cogon_Toyota = 14
+cogon_Timberlandwheels = 16.25
+cogon_Crossingbuluaterminal = 18.50
+cogon_Eskenawestbound = 20.50
+cogon_Dbm = 22.75
+cogon_Overpassbulua = 24
+cogon_Buluapoliceprecinct = 25
+cogon_Lto = 26
+cogon_Barra = 27.25
+cogon_Iponancrossing = 28.25
+cogon_Mabaylan = 29.50
+cogon_Yec = 30.25
+cogon_Camansi = 31.50
+cogon_Virginia = 32.75
+cogon_Cocacola = 33
+cogon_Anda = 33.75
+cogon_Promisedland = 35
+cogon_Aganfurniture = 36
+cogon_Bulaocentroterminal = 37
+
+# FROM TIMBERLAND ROUTES
+Timberlandwheels_Toyota = 14
+Timberlandwheels_CrossingBuluaTerminal = 14
+Timberlandwheels_Eskenawestbound = 16.25
+Timberlandwheels_Dbm = 18.50
+Timberlandwheels_Overpassbulua = 20.50
+Timberlandwheels_Buluapoliceprecinct = 22.75
+Timberlandwheels_Lto = 24
+Timberlandwheels_Barra = 25
+Timberlandwheels_Iponancrossing = 26
+Timberlandwheels_Mabaylan = 27.25
+Timberlandwheels_Yec = 28.25
+Timberlandwheels_Camansi = 29.50
+Timberlandwheels_Virgina = 30.25
+Timberlandwheels_Cocacola = 31.50
+Timberlandwheels_Anda = 32.75
+Timberlandwheels_Promisedland = 33
+Timberlandwheels_Aganfurniture = 33.75
+Timberlandwheels_Bulaocentroterminal = 35
+
+
+print('Good Day Maam/Sir! Welcome to Bus Corner! Please book your tickets here.')
+
+while(1):
+    origin = input('ORIGIN: ').upper()
+    destination = input('DESTINATION: ').upper()
+
+    if origin == 'COGON' and destination == 'TOYOTA':
+        print(f'ROUTE FARE: ₱{cogon_Toyota}')
+        quantity = int(input('QUANTITY: '))
+        subtotal = float(cogon_Toyota)
+        total = float(subtotal) * quantity
+        print(f'TOTAL AMOUNT: ₱{total}')
+        while(2):
+            money = float(input("MONEY: "))
+            if money < total:
+                print("INSUFFICIENT MONEY!!")
+            else:
+                change = float(money - total)
+                print(f'CHANGE: ₱{change}')
+                from datetime import date
+                today = date.today()
+                print('------------------------------------\n')
+                print('------------------------------------')
+                print(f'           FARE RECEIPT            ')
+                print(f'             {today}             \n')
+                print(f'ROUTE ORIGIN: {origin}\nROUTE DESTINATION: {destination}')
+                print(f'PASSENGER QUANTITY: {quantity}\nTOTAL AMOUNT: ₱{total}')
+                print(f'MONEY RECEIVED: ₱{money}\nCHANGE: ₱{change}  ')
+                print('------------------------------------')
+                quit()
+
+
+    elif origin == 'COGON' and destination == 'TIMBER LAND WHEELS':
+        print(f'ROUTE FARE: ₱{cogon_Timberlandwheels}')
+        quantity = int(input('QUANTITY: '))
+        subtotal = float(cogon_Timberlandwheels)
+        total = subtotal * quantity
+        print(f'TOTAL AMOUNT: ₱{total}')
+        while (2):
+            money = float(input("MONEY: "))
+            if money < total:
+                print("INSUFFICIENT MONEY!!")
+            else:
+                change = float(money - total)
+                print(f'CHANGE: ₱{change}')
+                from datetime import date
+                today = date.today()
+                print('------------------------------------\n')
+                print('------------------------------------')
+                print(f'           FARE RECEIPT            ')
+                print(f'             {today}             \n')
+                print(f'ROUTE ORIGIN: {origin}\nROUTE DESTINATION: {destination}')
+                print(f'PASSENGER QUANTITY: {quantity}\nTOTAL AMOUNT: ₱{total}')
+                print(f'MONEY RECEIVED: ₱{money}\nCHANGE: ₱{change}  ')
+                print('------------------------------------')
+                quit()
+
+    elif origin == 'COGON' and destination == 'CROSSING BULUA TERMINAL':
+        print(f'ROUTE FARE: ₱{cogon_Crossingbuluaterminal}')
+        quantity = int(input('QUANTITY: '))
+        subtotal = float(cogon_Crossingbuluaterminal)
+        total = subtotal * quantity
+        print(f'TOTAL AMOUNT: ₱{total}')
+        while (2):
+            money = float(input("MONEY: "))
+            if money < total:
+                print("INSUFFICIENT MONEY!!")
+            else:
+                change = float(money - total)
+                print(f'CHANGE: ₱{change}')
+                from datetime import date
+                today = date.today()
+                print('------------------------------------\n')
+                print('------------------------------------')
+                print(f'           FARE RECEIPT            ')
+                print(f'             {today}             \n')
+                print(f'ROUTE ORIGIN: {origin}\nROUTE DESTINATION: {destination}')
+                print(f'PASSENGER QUANTITY: {quantity}\nTOTAL AMOUNT: ₱{total}')
+                print(f'MONEY RECEIVED: ₱{money}\nCHANGE: ₱{change}  ')
+                print('------------------------------------')
+                quit()
+
+
+    else:
+        print("INPUT ERROR!! Try Again!")
+
