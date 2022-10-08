@@ -1,0 +1,14 @@
+print('Good Day! Welcome to Airlines Corner. Book your flight today!')
+print('Choose your routes here: \n')
+
+#ROUTE MENU
+print('===========================')
+print('| AVAILABLE ROUTES:       |')
+print('|                         |')
+print('| A. METRO MANILA         |')
+print('| B. BAGUIO               |')
+print('| C. CEBU                 |')
+print('| D. BOHOL                |')
+print('| E. CAGAYAN DE ORO       |')
+print('| F. DAVAO                |')
+print('===========================')
