@@ -12,3 +12,29 @@ print('| D. BOHOL                |')
 print('| E. CAGAYAN DE ORO       |')
 print('| F. DAVAO                |')
 print('===========================')
+
+def quantity():
+    while(1):
+        try:
+            quantity = int(input('QUANTITY: '))
+
+        except ValueError:
+            print('Invalid number!')
+
+origin = input('ROUTE ORIGIN: ').upper()
+if origin == 'A':
+    destination = input('ROUTE DESTINATION: ').upper()
+    quantity()
+    
+    if destination == 'B':
+        pass
+
+    if destination == 'C':
+        pass
+
+    if destination == 'D':
+        pass
+    if destination == 'E':
+        pass
+    if destination == 'F':
+        pass
