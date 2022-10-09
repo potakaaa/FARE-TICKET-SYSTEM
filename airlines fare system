@@ -1,3 +1,6 @@
+
+
+
 print('Good Day! Welcome to Airlines Corner. Book your flight today!')
 print('Choose your routes here: \n')
 
@@ -13,28 +16,63 @@ print('| E. CAGAYAN DE ORO       |')
 print('| F. DAVAO                |')
 print('===========================')
 
+#numbers = arr.array('i',[10,20,30])
+a = 'METRO MANILA', 'A'
+b = 'BAGUIO', 'B'
+c = 'CEBU', 'C' 
+d = 'BOHOL', 'D'  
+e = 'CAGAYAN DE ORO', 'E'  
+f = 'DAVAO', 'F'
+
+def flights():
+    print(f'FLIGHTS FROM {origin} to {destination}')
+    from datetime import date
+    today = date.today()
+    print(f'AVAILABLE FLIGHTS AS OF {today}')
+    print(f'7:30AM: {origin} ---> 9:00AM: {destination}')
+    print(f'10:00AM: {origin} ---> 11:30AM: {destination}')
+    print(f'1:30PM: {origin} ---> 3:00PM: {destination}')
+    print(f'4:30PM: {origin} ---> 6:00PM: {destination}')
+    print(f'7:30PM: {origin} ---> 9:00PM: {destination}')
+
 def quantity():
     while(1):
         try:
             quantity = int(input('QUANTITY: '))
+            break
 
         except ValueError:
-            print('Invalid number!')
+            print('INVALID NUMBER!!')
 
-origin = input('ROUTE ORIGIN: ').upper()
-if origin == 'A':
-    destination = input('ROUTE DESTINATION: ').upper()
-    quantity()
-    
-    if destination == 'B':
-        pass
+def money():
+    while(2):
+        return
 
-    if destination == 'C':
-        pass
+while(3):
+    origin = input('ROUTE ORIGIN: ').upper()
+    if origin == (a[1]):
+        origin = (a[0])
+        destination = input('ROUTE DESTINATION: ').upper()
+        
+        if destination == (b[1]):
+            destination = (b[0])
+            flights()
 
-    if destination == 'D':
-        pass
-    if destination == 'E':
-        pass
-    if destination == 'F':
-        pass
+
+        if destination == (c[1]):
+            pass
+
+        if destination == (d[1]):
+            pass
+        if destination == (e[1]):
+            pass
+        if destination == (f[1]):
+            pass
+
+
+
+
+
+
+    else:
+        print('INVALID ORIGIN!!')
