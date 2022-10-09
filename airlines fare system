@@ -17,23 +17,142 @@ print('| F. DAVAO                |')
 print('===========================')
 
 #numbers = arr.array('i',[10,20,30])
-a = 'METRO MANILA', 'A'
-b = 'BAGUIO', 'B'
-c = 'CEBU', 'C' 
-d = 'BOHOL', 'D'  
-e = 'CAGAYAN DE ORO', 'E'  
-f = 'DAVAO', 'F'
+a = 'METRO MANILA', 'A', 'NINOY AQUINO INTERNATIONAL AIRPORT'
+b = 'BAGUIO', 'B', 'LOAKAN AIRPORT'
+c = 'CEBU', 'C', 'MACTAN CEBU INTERNATIONAL AIRPORT'
+d = 'BOHOL', 'D', 'BOHOL-PANGLAO INTERNATIONAL AIRPORT'
+e = 'CAGAYAN DE ORO', 'E', 'LAGUINDINGAN AIRPORT'
+f = 'DAVAO', 'F', 'FRANCISCO BANGOY INTERNATIONAL AIRPORT'
 
-def flights():
-    print(f'FLIGHTS FROM {origin} to {destination}')
+first_flight = '7:30AM ---> 9:00AM', '1', 1400
+second_flight = '10:00AM ---> 11:30AM', '2', 1600
+third_flight = '1:30PM ---> 3:00PM', '3', 1700
+fourth_flight = '4:30PM ---> 6:00PM', '4',1900
+fifth_flight = '7:30PM ---> 9:00PM', '5', 2100
+
+
+def manila_b():
+    print(f'\nFLIGHTS FROM {origin} to {destination}')
     from datetime import date
     today = date.today()
-    print(f'AVAILABLE FLIGHTS AS OF {today}')
-    print(f'7:30AM: {origin} ---> 9:00AM: {destination}')
-    print(f'10:00AM: {origin} ---> 11:30AM: {destination}')
-    print(f'1:30PM: {origin} ---> 3:00PM: {destination}')
-    print(f'4:30PM: {origin} ---> 6:00PM: {destination}')
-    print(f'7:30PM: {origin} ---> 9:00PM: {destination}')
+    print('===============================================================================')
+    print(f'| AVAILABLE FLIGHTS AS OF {today}                                             ')
+    print('|                                                                              ')
+    print(f'| 1. 7:30AM: {origin} ---> 9:00AM: {destination}        ₱1,400/pax            ')
+    print(f'| 2. 10:00AM: {origin} --->  11:30AM: {destination}     ₱1,600/pax            ')
+    print(f'| 3. 1:30PM: {origin} ---> 3:00PM: {destination}        ₱1,700/pax            ')
+    print(f'| 4. 4:30PM: {origin} ---> 6:00PM: {destination}        ₱1,900/pax            ')
+    print(f'| 5. 7:30PM: {origin} ---> 9:00PM: {destination}        ₱2,100/pax            ')
+    print('===============================================================================')
+    flight_time = input('\nSELECT FLIGHT TIME (1-5): ')
+    quantity = int(input('PASSENGER QUANTITY: '))
+
+
+    def manila_desti_first():
+        time = (first_flight[0])
+        price = float(first_flight[2])
+        amount = quantity * price
+        origin_airport = (a[2])
+        desti_aiport = (b[2])
+
+
+    def manila_desti_second():
+        time = (second_flight[0])
+        price = float(second_flight[2])
+        amount = quantity * price
+        origin_airport = (a[2])
+        desti_aiport = (b[2])
+
+    def manila_desti_third():
+        time = (third_flight[0])
+        price = float(third_flight[2])
+        amount = quantity * price
+        origin_airport = (a[2])
+        desti_aiport = (b[2])
+
+    def manila_desti_fourth():
+        time = (fourth_flight[0])
+        price = float(fourth_flight[2])
+        amount = quantity * price
+        origin_airport = (a[2])
+        desti_aiport = (b[2])
+
+    def manila_desti_fifth():
+        time = (fifth_flight[0])
+        price = float(fifth_flight[2])
+        amount = quantity * price
+        origin_airport = (a[2])
+        desti_aiport = (b[2])
+
+    
+        def money():
+            while(6):
+                money = float(input('\nMONEY RECEIVED: '))
+                if money < amount:
+                    print('INSUFFICIENT MONEY!!')
+                else:
+                    change = money - amount
+                    print(f'TOTAL AMOUNT: {amount} ')
+                    print(f'CHANGE: {change} ')
+                    print('\n===============================================================================')
+                    print('|             AIRLINES CORNER               ')
+                    print('|             BOOKING DETAILS               ')
+                    print(f'| {origin} ---> {destination}')  
+                    print(f'| {origin_airport} ---> {desti_aiport}')  
+                    print(f'| DEPARTURE TIME: {time}')
+                    print(f'| PASSENGER QUANTITY: {quantity} PEOPLE')
+                    print(f'| TOTAL AMOUNT: ₱{amount}')
+                    break
+
+        
+
+        print('PLEASE DOUBLE CHECK DETAILS BEFORE BOOKING TICKET!')
+        print('\n===============================================================================')
+        print('|             AIRLINES CORNER               ')
+        print('|             BOOKING DETAILS               ')
+        print(f'| {origin} ---> {destination}')  
+        print(f'| {origin_airport} ---> {desti_aiport}')  
+        print(f'| DEPARTURE TIME: {time}')
+        print(f'| PASSENGER QUANTITY: {quantity} PEOPLE')
+        print(f'| TOTAL AMOUNT: ₱{amount}')
+
+        while(5):
+            answer = input('\nCONFIRM BOOKING? (y/n): ').lower()
+            if answer == 'y':
+                money()
+                print('THANK YOU FOR BOOKING IN AIRLINES CORNER! HAVE A SAFE FLIGHT AND ENJOY YOUR DEPARTURE!')
+                quit()
+                
+            if answer == 'n':
+                print('THANK YOU FOR VISITING AIRLINES CORNER! STAY SAFE!')
+                quit()
+            else:
+                print('INVALID INPUT!! TRY AGAIN!')
+            
+            
+        
+                
+    
+    
+    
+    
+    if flight_time == (first_flight[1]):
+        manila_desti_first()
+
+    elif flight_time == (second_flight[1]):
+        manila_desti_second()
+
+    elif flight_time == (third_flight[1]):
+        manila_desti_third()
+    
+    elif flight_time == (fourth_flight[1]):
+        manila_desti_fourth()
+
+    elif flight_time == (fifth_flight[1]):
+        manila_desti_fifth()
+
+
+
 
 def quantity():
     while(1):
@@ -44,19 +163,18 @@ def quantity():
         except ValueError:
             print('INVALID NUMBER!!')
 
-def money():
-    while(2):
-        return
+
 
 while(3):
-    origin = input('ROUTE ORIGIN: ').upper()
+    origin = input('\nROUTE ORIGIN: ').upper()
     if origin == (a[1]):
         origin = (a[0])
         destination = input('ROUTE DESTINATION: ').upper()
         
         if destination == (b[1]):
             destination = (b[0])
-            flights()
+            manila_b()
+            
 
 
         if destination == (c[1]):
@@ -69,6 +187,8 @@ while(3):
         if destination == (f[1]):
             pass
 
+        
+
 
 
 
@@ -76,3 +196,4 @@ while(3):
 
     else:
         print('INVALID ORIGIN!!')
+        
