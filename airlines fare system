@@ -236,28 +236,32 @@ while(1):
             destination_airport = (b[2])
             timestamp()
             flight_time()
-
+        
+        #cebu_destination
         if destination == (c[1]):
             destination = (c[0])
             destination_airport = (c[2])
             timestamp()
             flight_time()
 
-        if destination == (c[1]):
-            destination = (c[0])
-            destination_airport = (c[2])
-            timestamp()
-            flight_time()
-
+        #bohol_destination
         if destination == (d[1]):
             destination = (d[0])
             destination_airport = (d[2])
             timestamp()
             flight_time()
 
+        #cdo_destination
         if destination == (e[1]):
             destination = (e[0])
             destination_airport = (e[2])
+            timestamp()
+            flight_time()
+
+        #davao_destination
+        if destination == (f[1]):
+            destination = (f[0])
+            destination_airport = (f[2])
             timestamp()
             flight_time()
 
@@ -444,19 +448,3 @@ while(1):
 
     else:
         print('INVALID KEYWORD!!')
-
-        
-
-             
-
-
-            
-
-        
-        
-        
-        
-
-
-
-        
