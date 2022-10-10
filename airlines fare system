@@ -96,7 +96,7 @@ def davao_origin():
 def timestamp():
     from datetime import date
     today = date.today()
-    print(f'AVAILABLE FLIGHTS AS OF {today}.')
+    print(f'\nAVAILABLE FLIGHTS AS OF {today}.')
     print('\n===============================================')
     print('| |    TIME STAMPS           |   PRICE   | CODE |')
     print('|-----------------------------------------------|')
@@ -210,7 +210,6 @@ def payment():
                 else:
                     global change
                     change = money - total
-                    receipt()
                     return
 
 
@@ -340,7 +339,7 @@ while(1):
     if origin == (d[1]):
         origin = (d[0])
         origin_airport = (d[2])
-        cebu_origin()
+        bohol_origin()
         destination = input('ROUTE DESTINATION (A-F): \n').upper()
 
         if destination == (a[1]):
@@ -376,7 +375,7 @@ while(1):
     if origin == (e[1]):
         origin = (e[0])
         origin_airport = (e[2])
-        cebu_origin()
+        cdo_origin()
         destination = input('ROUTE DESTINATION (A-F): \n').upper()
 
         if destination == (a[1]):
@@ -412,7 +411,7 @@ while(1):
     if origin == (f[1]):
         origin = (f[0])
         origin_airport = (f[2])
-        cebu_origin()
+        davao_origin()
         destination = input('ROUTE DESTINATION (A-F): \n').upper()
 
         if destination == (a[1]):
